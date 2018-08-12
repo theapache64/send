@@ -13,7 +13,8 @@
           "ts-node/register"
       ],
       "args": [
-          "${workspaceFolder}/src/App.ts"
+          "${workspaceFolder}/src/App.ts",
+          "send README.md to theapache64@gmail.com"
       ]
   }
   ]
