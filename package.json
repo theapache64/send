@@ -1,0 +1,32 @@
+{
+  "name": "send",
+  "version": "1.0.0",
+  "description": "Quick file transfer through email",
+  "main": "App.ts",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/theapache64/send.git"
+  },
+  "keywords": [
+    "Quick",
+    "file",
+    "transfer",
+    "through",
+    "email"
+  ],
+  "author": "theapache64",
+  "license": "Apache-2.0",
+  "bugs": {
+    "url": "https://github.com/theapache64/send/issues"
+  },
+  "homepage": "https://github.com/theapache64/send#readme",
+  "devDependencies": {
+    "ts-node": "^7.0.1",
+    "tslint": "^5.11.0",
+    "tslint-config-airbnb": "^5.9.2",
+    "typescript": "^3.0.1"
+  }
+}
