@@ -1,0 +1,9 @@
+{
+  "smtp_config": {
+    "host": "HOST",
+    "port": "PORT",
+    "username": "USERNAME",
+    "password": "PASSWORD"
+  },
+  "default_domain": "DEFAULT_DOMAIN"
+}
