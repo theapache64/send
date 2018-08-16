@@ -4,7 +4,7 @@
   "description": "Quick file transfer through email",
   "main": "App.ts",
   "scripts": {
-    "run": "ts-node src/App.ts"
+    "run": "ts-node src/App.ts send README.md to theapache64@gmail.com"
   },
   "repository": {
     "type": "git",
@@ -25,6 +25,7 @@
   "homepage": "https://github.com/theapache64/send#readme",
   "devDependencies": {
     "@types/node": "^10.5.8",
+    "@types/nodemailer": "^4.6.2",
     "ts-node": "^7.0.1",
     "tslint": "^5.11.0",
     "tslint-config-airbnb": "^5.9.2",

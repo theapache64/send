@@ -26,4 +26,7 @@ export class SendConfig {
   @Expose({ name: 'smtp_config' })
   readonly smtpConfig: SmtpConfig;
 
+  @Expose({ name: 'default_domain' })
+  readonly defaultDomain: string;
+
 }
