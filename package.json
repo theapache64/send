@@ -4,7 +4,7 @@
   "description": "Quick file transfer through email",
   "main": "App.ts",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "run": "ts-node src/App.ts"
   },
   "repository": {
     "type": "git",
@@ -29,5 +29,10 @@
     "tslint": "^5.11.0",
     "tslint-config-airbnb": "^5.9.2",
     "typescript": "^3.0.1"
+  },
+  "dependencies": {
+    "reflect-metadata": "^0.1.12",
+    "class-transformer": "^0.1.9",
+    "nodemailer": "^4.6.7"
   }
 }
