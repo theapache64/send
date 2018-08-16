@@ -9,7 +9,8 @@ send [fileName] to [emailId]
 
 ### Example Config
 
-```{
+```
+{
   "smtp_config": {
     "host": "us2.smtp.mailhostbox.com",
     "port": "25",
