@@ -12,6 +12,7 @@ export class CommandParser {
 
   constructor(arr: string[], sendConfig: SendConfig) {
     this.arr = arr;
+
     this.sendConfig = sendConfig;
   }
   getReason(): string {
