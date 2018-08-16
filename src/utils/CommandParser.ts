@@ -45,11 +45,16 @@ export class CommandParser {
           const toFlag = this.arr[4];
           if (toFlag === 'to') {
             const to = this.arr[5];
-            if (to.indexOf('@') !== -1) {
-              this.email = to;
-            } else {
-              this.email = `${to}@${this.sendConfig.defaultDomain}`;
+            const toArr = to.split(',');
+            const emails: string[] = [];
+            for (const nameOrEmail of toArr) {
+              if (nameOrEmail.indexOf('@') !== -1) {
+                emails.push(nameOrEmail);
+              } else {
+                emails.push(`${to}@${this.sendConfig.defaultDomain}`);
+              }
             }
+            this.email = emails.join(',');
           } else {
             this.reason = `Expected 'to', but found ${toFlag}`;
           }
