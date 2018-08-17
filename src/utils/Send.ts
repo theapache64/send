@@ -1,12 +1,13 @@
 import { SendConfig } from '../interfaces/SendConfig';
 import nodemailer from 'nodemailer';
+import { CommandParser } from './CommandParser';
 
 export class Send {
-  static sendFile(filePath: string, email: string, sendConfig: SendConfig): any {
+  static sendFile(command: CommandParser, sendConfig: SendConfig)
+    : any {
 
-    // Getting fileName
-    const fileName = filePath.replace(/^.*[\\\/]/, '');
-    console.log(`Sending ${fileName} to ${email}...`);
+    // Getting fileNam
+    console.log(`Sending ${command.getFileName()} to ${command.getEmail()}...`);
 
     const smtp = sendConfig.smtpConfig;
     const transport = nodemailer.createTransport(
@@ -16,12 +17,13 @@ export class Send {
     transport.sendMail(
       {
         from: smtp.username,
-        to: email,
-        subject: `File Shared: ${fileName}`,
+        to: command.getEmail(),
+        subject: `File Shared: ${command.getFileName()}`,
         text: 'Hi, \n\n Please find the attached file',
         attachments: [
           {
-            path: filePath
+            filename: command.getFileName(),
+            path: command.getFilePath()
           }
         ]
       },

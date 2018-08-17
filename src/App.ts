@@ -13,7 +13,7 @@ const sendConfig: SendConfig = plainToClass<SendConfig, string>(SendConfig, send
 const command = new CommandParser(process.argv, sendConfig);
 if (command.isValidCommand()) {
   // Sending file
-  Send.sendFile(command.getFilePath(), command.getEmail(), sendConfig);
+  Send.sendFile(command, sendConfig);
 } else {
   console.log('Invalid command :', command.getReason());
 }

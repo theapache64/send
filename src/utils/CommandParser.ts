@@ -8,12 +8,17 @@ export class CommandParser {
   private sendConfig: SendConfig;
 
   private filePath: string;
+  private fileName: string;
   private email: string;
+  private as: string;
 
   constructor(arr: string[], sendConfig: SendConfig) {
     this.arr = arr;
 
     this.sendConfig = sendConfig;
+  }
+  getFileName(): any {
+    return this.fileName;
   }
   getReason(): string {
     return this.reason;
@@ -32,16 +37,19 @@ export class CommandParser {
     this.reason = '';
     this.email = '';
 
-    if (this.arr.length === 6) {
+    if (this.arr.length >= 6) {
       const baseCommand = this.arr[2];
       if (baseCommand === 'send') {
+
         const fileName = this.arr[3];
+
         // Checking if file exists
         const filePath = `${process.cwd()}/${fileName}`;
         if (fs.existsSync(filePath)) {
 
           // Setting filePath
           this.filePath = filePath;
+          this.fileName = filePath.replace(/^.*[\\\/]/, '');
 
           const toFlag = this.arr[4];
           if (toFlag === 'to') {
@@ -56,6 +64,14 @@ export class CommandParser {
               }
             }
             this.email = emails.length > 1 ? emails.join(',') : emails[0];
+
+            // Getting as file name
+            if (this.arr.length >= 8) {
+              if (this.arr[6] === 'as') {
+                this.fileName = this.arr[7];
+              }
+            }
+
           } else {
             this.reason = `Expected 'to', but found ${toFlag}`;
           }
