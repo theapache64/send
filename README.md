@@ -4,7 +4,7 @@ Quick file transfer through email
 ### Syntax
 
 ```
-send [fileName] to [emailId]
+send [fileName] to [emailId] [as [attachmentName]]
 ```
 
 ### Example Config
@@ -22,8 +22,10 @@ send [fileName] to [emailId]
 
 ```
 
-### Alias
+### .bashrc
 
 ```
-ts-node --project ~/Documents/projects/send/tsconfig.json ~/Documents/projects/send/src/App.ts send $1 to $3
+function send(){
+	ts-node --project ~/Documents/projects/send/tsconfig.json ~/Documents/projects/send/src/App.ts send "$1" $2 "$3" $4 "$5"
+}
 ```
