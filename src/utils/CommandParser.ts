@@ -19,7 +19,7 @@ export class CommandParser {
   }
 
   getContent(): any {
-    return `Hi, \n\n Please find the attached file. \n\n Regards,\n${this.sendConfig.name}`;
+    return `Hi, \n\n Please find the attached file. \n\nRegards,\n${this.sendConfig.name}`;
   }
 
   getFileName(): any {
