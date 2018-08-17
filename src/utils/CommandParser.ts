@@ -51,7 +51,7 @@ export class CommandParser {
               if (nameOrEmail.indexOf('@') !== -1) {
                 emails.push(nameOrEmail);
               } else {
-                emails.push(`${to}@${this.sendConfig.defaultDomain}`);
+                emails.push(`${nameOrEmail}@${this.sendConfig.defaultDomain}`);
               }
             }
             this.email = emails.join(',');
