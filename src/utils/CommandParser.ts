@@ -54,7 +54,7 @@ export class CommandParser {
                 emails.push(`${nameOrEmail}@${this.sendConfig.defaultDomain}`);
               }
             }
-            this.email = emails.join(',');
+            this.email = emails.length > 1 ? emails.join(',') : emails[0];
           } else {
             this.reason = `Expected 'to', but found ${toFlag}`;
           }
