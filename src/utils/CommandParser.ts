@@ -17,6 +17,11 @@ export class CommandParser {
 
     this.sendConfig = sendConfig;
   }
+
+  getContent(): any {
+    return `Hi, \n\n Please find the attached file , \n\n Regards,\n${this.sendConfig.name}`;
+  }
+
   getFileName(): any {
     return this.fileName;
   }

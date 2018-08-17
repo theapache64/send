@@ -1,4 +1,5 @@
 {
+  "name":"Your Name",
   "smtp_config": {
     "host": "HOST",
     "port": "PORT",

@@ -11,6 +11,7 @@ send [fileName] to [emailId] [as [attachmentName]]
 
 ```
 {
+  "name":"John",
   "smtp_config": {
     "host": "us2.smtp.mailhostbox.com",
     "port": "25",

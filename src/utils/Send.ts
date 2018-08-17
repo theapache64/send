@@ -3,7 +3,10 @@ import nodemailer from 'nodemailer';
 import { CommandParser } from './CommandParser';
 
 export class Send {
-  static sendFile(command: CommandParser, sendConfig: SendConfig)
+  static sendFile(
+    command: CommandParser,
+    sendConfig: SendConfig
+  )
     : any {
 
     // Getting fileNam
@@ -19,7 +22,7 @@ export class Send {
         from: smtp.username,
         to: command.getEmail(),
         subject: `File Shared: ${command.getFileName()}`,
-        text: 'Hi, \n\n Please find the attached file',
+        text: command.getContent(),
         attachments: [
           {
             filename: command.getFileName(),

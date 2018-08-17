@@ -29,4 +29,7 @@ export class SendConfig {
   @Expose({ name: 'default_domain' })
   readonly defaultDomain: string;
 
+  @Expose({ name: 'name' })
+  readonly name: string;
+
 }
