@@ -30,6 +30,7 @@ export class CommandParser {
   isValidCommand(): boolean {
 
     this.reason = '';
+    this.email = '';
 
     if (this.arr.length === 6) {
       const baseCommand = this.arr[2];

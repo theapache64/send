@@ -29,7 +29,7 @@ export class Send {
         if (error) {
           console.log(`✖️ Failed to send: ${error}: ${info}`);
         } else {
-          console.log('👍 Sent');
+          console.log('👍 Sent: ', info);
         }
         transport.close();
       });
