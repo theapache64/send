@@ -66,6 +66,8 @@ export class CommandParser {
             this.email = emails.length > 1 ? emails.join(',') : emails[0];
 
             // Getting as file name
+            console.log(this.arr);
+
             if (this.arr.length >= 8) {
               if (this.arr[6] === 'as') {
                 this.fileName = this.arr[7];
