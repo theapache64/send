@@ -7,6 +7,10 @@ Quick file transfer through email
 send [fileName] to [emailId] [as [attachmentName]]
 ```
 
+### Demo
+
+![](./demo.gif)
+
 ### Example Config
 
 ```
