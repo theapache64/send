@@ -55,7 +55,7 @@ export class CommandParser {
           // Setting filePath
           this.filePath = filePath;
           this.fileName = filePath.replace(/^.*[\\\/]/, '');
-
+          
           const toFlag = this.arr[4];
           if (toFlag === 'to') {
             const to = this.arr[5];

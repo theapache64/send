@@ -9,13 +9,15 @@ export class Send {
   )
     : any {
 
-    // Getting fileNam
+    // Getting fileName
     console.log(`Sending ${command.getFileName()} to ${command.getEmail()}...`);
 
     const smtp = sendConfig.smtpConfig;
     const transport = nodemailer.createTransport(
       `smtp://${smtp.username}:${smtp.password}@${smtp.host}/?pool=true&port=${smtp.port}`
     );
+
+  
 
     transport.sendMail(
       {
