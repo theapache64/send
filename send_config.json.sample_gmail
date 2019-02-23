@@ -1,0 +1,10 @@
+{
+  "name":"John Doe",
+  "smtp_config": {
+    "host": "smtp.gmail.com",
+    "port": "587",
+    "username": "john.doe@gmail.com",
+    "password": "mySecretPassword"
+  },
+  "default_domain": "gmail.com"
+}
