@@ -15,16 +15,15 @@ send [fileName] to [emailId] [as [attachmentName]]
 
 ```
 {
-  "name":"John",
+  "name":"John Doe",
   "smtp_config": {
-    "host": "us2.smtp.mailhostbox.com",
-    "port": "25",
-    "username": "john@example.com",
-    "password": "myPassword"
+    "host": "smtp.gmail.com",
+    "port": "587",
+    "username": "john.doe@gmail.com",
+    "password": "mySecretPassword"
   },
-  "default_domain": "example.com"
+  "default_domain": "gmail.com"
 }
-
 ```
 
 ### .bashrc
